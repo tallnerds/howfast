@@ -1,0 +1,21 @@
+{
+  "name": "howfast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "hello": "./bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "chrome-launcher": "^0.13.4",
+    "lighthouse": "^6.4.1",
+    "yargs": "^16.1.0"
+  }
+}
