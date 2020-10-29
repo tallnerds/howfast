@@ -33,6 +33,7 @@ const options = yargs
   let results = {};
   // Run through and get results
   for (let x = 0; x < options.times; x++) {
+    console.log(`Run ${x + 1} for ${options.site}`);
     results[x] = await getMetrics(options.site);
     // results[x] = JSON.parse(fs.readFileSync("report.json"));
   }
@@ -40,28 +41,32 @@ const options = yargs
   const metrics = parseMetrics(results, options.times);
 
   // Average metrics over runs
+  console.log(
+    chalk.underline(`
+Average Performance Across ${options.site}`)
+  );
   console.log(`
-Avg Performance Score: ${colorify(
+Performance Score: ${colorify(
     metrics.performanceScore.score,
     metrics.performanceScore.score
   )}
-Avg First Contentful Paint: ${colorify(
+First Contentful Paint: ${colorify(
     `${metrics.firstContentfulPaint.numericValue}ms`,
     metrics.firstContentfulPaint.score
   )}
-Avg Largest Contentful Paint: ${colorify(
+Largest Contentful Paint: ${colorify(
     `${metrics.largestContentfulPaint.numericValue}ms`,
     metrics.largestContentfulPaint.score
   )}
-Avg Speed Index: ${colorify(
+Speed Index: ${colorify(
     `${metrics.speedIndex.numericValue}ms`,
     metrics.speedIndex.score
   )}
-Avg Cumulative Layout Shift: ${colorify(
+Cumulative Layout Shift: ${colorify(
     `${metrics.cumulativeLayoutShift.numericValue}`,
     metrics.cumulativeLayoutShift.score
   )}
-Avg Server Response Time: ${colorify(
+Server Response Time: ${colorify(
     `${metrics.serverResponseTime.numericValue}ms`,
     metrics.serverResponseTime.score
   )}
