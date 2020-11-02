@@ -2,7 +2,7 @@
 
 A simple CLI for generating more accurate data from [Lighthouse](https://github.com/GoogleChrome/lighthouse/) reports.
 
-![](./docs/console_usage.gif)
+![](./docs/assets/console_usage.gif)
 
 ## Installation
 
