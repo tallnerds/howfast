@@ -1,15 +1,11 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
 const yargs = require("yargs");
-const _ = require("lodash");
-const chalk = require("chalk");
-const { colorify } = require("./../lib/console");
+const { metricSummary } = require("./../lib/console");
 const renderReport = require("./../lib/renderReport");
 const { getMetrics, parseMetrics } = require("./../lib/pagespeed");
 
 const options = yargs
-  .usage("Usage: -n <name>")
   .option("s", {
     alias: "site",
     describe: "Site to run performance on",
@@ -22,9 +18,17 @@ const options = yargs
     type: "number",
     default: 3,
   })
-  .option("o", {
-    alias: "output",
-    describe: "Place you would like to output your file",
+  .option("json", {
+    type: "boolean",
+    description: "(Default) Output raw json metric data to file",
+  })
+  .option("html", {
+    type: "boolean",
+    description: "Output an html report of metric data to file",
+  })
+  .option("f", {
+    alias: "filepath",
+    describe: "Location to output metric data",
     type: "string",
     default: "/tmp",
   }).argv;
@@ -35,29 +39,11 @@ const options = yargs
   for (let x = 0; x < options.times; x++) {
     console.log(`Run ${x + 1} for ${options.site}`);
     results.push(await getMetrics(options.site));
-    // results[x] = JSON.parse(fs.readFileSync("report.json"));
   }
 
   const metrics = parseMetrics(results, options.times);
   renderReport(metrics, options);
 
-  // Average metrics over runs
-  console.log(
-    chalk.underline(`
-Average performance across ${options.site}`)
-  );
-
-  _.forEach(
-    metrics,
-    ({ label, metricUnit, average: { score, numericValue } }) => {
-      console.log(
-        `${label}: ${colorify(
-          `${numericValue ? numericValue : score}${
-            metricUnit ? metricUnit : ""
-          }`,
-          score
-        )}`
-      );
-    }
-  );
+  // Summary of runs
+  metricSummary(metrics);
 })();

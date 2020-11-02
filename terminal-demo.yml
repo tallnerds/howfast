@@ -17,12 +17,12 @@ config:
   # Explicitly set the number of columns
   # or use `auto` to take the current
   # number of columns of your shell
-  cols: 151
+  cols: 120
 
   # Explicitly set the number of rows
   # or use `auto` to take the current
   # number of rows of your shell
-  rows: 34
+  rows: 20
 
   # Amount of times to repeat GIF
   # If value is -1, play once
@@ -32,7 +32,7 @@ config:
 
   # Quality
   # 1 - 100
-  quality: 100
+  quality: 20
 
   # Delay between frames in ms
   # If the value is `auto` use the actual recording delays
@@ -41,7 +41,7 @@ config:
   # Maximum delay between frames in ms
   # Ignored if the `frameDelay` isn't set to `auto`
   # Set to `auto` to prevent limiting the max idle time
-  maxIdleTime: 2000
+  maxIdleTime: 3000
 
   # The surrounding frame box
   # The `type` can be null, window, floating, or solid`
@@ -110,89 +110,91 @@ config:
 
 # Records, feel free to edit them
 records:
-  - delay: 137
-    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                      \r \r\e]2;cconey@C02WR2AZHTDD: ~/projects/howfast\a\e]1;..jects/howfast\a"
-  - delay: 87
-    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mhowfast\e[00m \e[33m\e[00m \e[01;34mgit:(\e[31mmain\e[34m) \e[33m✗\e[00m \e[K\e[?1h\e=\e[?2004h"
-  - delay: 13254
-    content: "h\e[90mowfast -s https://bankrate.com -t 1 -f ~/Downloads --html\e[39m\e[57D"
-  - delay: 182
-    content: "\bh\e[39mo"
-  - delay: 87
-    content: "\e[39mw"
-  - delay: 152
-    content: "\e[39mf"
-  - delay: 119
-    content: "\e[39ma"
-  - delay: 96
-    content: "\e[39ms"
-  - delay: 170
-    content: "\e[39mt"
-  - delay: 151
-    content: "\e[39m "
-  - delay: 178
-    content: "\e[39m-"
-  - delay: 215
-    content: "\e[39ms"
-  - delay: 870
-    content: "\e[39m "
-  - delay: 207
-    content: "\e[39mh"
-  - delay: 103
-    content: "\e[39mt"
-  - delay: 145
-    content: "\e[39mt"
-  - delay: 46
-    content: "\e[39mp"
-  - delay: 168
-    content: "\e[39ms"
-  - delay: 157
-    content: "\e[39m:"
-  - delay: 258
-    content: "\e[39m/"
-  - delay: 126
-    content: "\e[39m/"
-  - delay: 241
-    content: "\e[39mg\e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[39m \e[38D"
-  - delay: 72
-    content: o
-  - delay: 142
-    content: o
-  - delay: 117
-    content: g
-  - delay: 100
-    content: l
-  - delay: 124
-    content: e
-  - delay: 80
-    content: .
-  - delay: 147
-    content: c
-  - delay: 79
-    content: o
-  - delay: 122
-    content: m
-  - delay: 585
+  - delay: 1357
+    content: h
+  - delay: 220
+    content: "\bho"
+  - delay: 140
+    content: w
+  - delay: 291
+    content: f
+  - delay: 169
+    content: a
+  - delay: 76
+    content: s
+  - delay: 218
+    content: t
+  - delay: 128
     content: " "
-  - delay: 170
+  - delay: 173
     content: "-"
-  - delay: 157
+  - delay: 130
+    content: s
+  - delay: 95
+    content: " "
+  - delay: 194
+    content: h
+  - delay: 51
+    content: t
+  - delay: 160
+    content: t
+  - delay: 92
+    content: p
+  - delay: 618
+    content: s
+  - delay: 156
+    content: ":"
+  - delay: 200
+    content: /
+  - delay: 112
+    content: /
+  - delay: 534
+    content: b
+  - delay: 72
+    content: a
+  - delay: 93
+    content: "n"
+  - delay: 165
+    content: k
+  - delay: 85
+    content: r
+  - delay: 64
+    content: a
+  - delay: 146
     content: t
   - delay: 145
+    content: e
+  - delay: 32
+    content: .
+  - delay: 159
+    content: c
+  - delay: 73
+    content: o
+  - delay: 96
+    content: m
+  - delay: 144
     content: " "
-  - delay: 171
-    content: "2"
-  - delay: 1254
-    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;howfast -s https://google.com -t 2\a\e]1;howfast\a"
-  - delay: 574
-    content: "Run 1 for https://google.com\r\n"
-  - delay: 6505
-    content: "Run 2 for https://google.com\r\n"
-  - delay: 5436
-    content: "\e[4m\e[24m\r\n\e[4mAverage performance\e[24m\r\nPerformance Score: \e[32m91\e[39m\r\nFirst Contentful Paint: \e[32m1792.66ms\e[39m\r\nLargest Contentful Paint: \e[32m2021.27ms\e[39m\r\nSpeed Index: \e[32m1939.86ms\e[39m\r\nCumulative Layout Shift: \e[32m0.15\e[39m\r\nServer Response Time: \e[32m137.24ms\e[39m\r\n"
-  - delay: 127
-    content: "\e[1m\e[7m%\e[27m\e[1m\e[0m                                                                                                                                                      \r \r\e]2;cconey@C02WR2AZHTDD: ~/projects/howfast\a\e]1;..jects/howfast\a"
-  - delay: 282
-    content: "\r\e[0m\e[27m\e[24m\e[J\e[01;32m➜  \e[36mhowfast\e[00m \e[33m\e[00m \e[01;34mgit:(\e[31mmain\e[34m) \e[33m✗\e[00m \e[K\e[?1h\e=\e[?2004h"
-  - delay: 4288
-    content: "\e[?2004l\r\r\n"
+  - delay: 984
+    content: "-"
+  - delay: 295
+    content: t
+  - delay: 140
+    content: " "
+  - delay: 415
+    content: "5"
+  - delay: 834
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;howfast -s https://bankrate.com -t 5\a\e]1;howfast\a"
+  - delay: 506
+    content: "Run 1 for https://bankrate.com\r\n"
+  - delay: 750
+    content: "Run 2 for https://bankrate.com\r\n"
+  - delay: 750
+    content: "Run 3 for https://bankrate.com\r\n"
+  - delay: 750
+    content: "Run 4 for https://bankrate.com\r\n"
+  - delay: 750
+    content: "Run 5 for https://bankrate.com\r\n"
+  - delay: 750
+    content: "\e[4m\e[24m\r\n\e[4mAverage performance\e[24m\r\nPerformance Score: \e[33m36\e[39m\r\nFirst Contentful Paint: \e[32m3062.76ms\e[39m\r\nLargest Contentful Paint: \e[31m7535.74ms\e[39m\r\nSpeed Index: \e[33m6005.77ms\e[39m\r\nCumulative Layout Shift: \e[31m1.46\e[39m\r\nServer Response Time: \e[32m50.20ms\e[39m\r\n"
+  - delay: 3000
+    content: "\r\n> "
