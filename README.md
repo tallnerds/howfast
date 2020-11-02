@@ -64,6 +64,10 @@ The default report output is json. Here is the generate structure of the json fi
 }
 ```
 
+Here is a nice visual representation
+
+![](./docs/assets/json_output.png)
+
 ## Contributing
 
 ### Re-render Usage Gif

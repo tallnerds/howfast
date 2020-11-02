@@ -17,7 +17,7 @@ config:
   # Explicitly set the number of columns
   # or use `auto` to take the current
   # number of columns of your shell
-  cols: 120
+  cols: 70
 
   # Explicitly set the number of rows
   # or use `auto` to take the current
@@ -32,7 +32,7 @@ config:
 
   # Quality
   # 1 - 100
-  quality: 20
+  quality: 75
 
   # Delay between frames in ms
   # If the value is `auto` use the actual recording delays
@@ -49,7 +49,7 @@ config:
   # Don't forget to add a backgroundColor style with a null as type
   frameBox:
     type: floating
-    title: Terminalizer
+    title: howfast
     style:
       border: 0px black solid
       # boxShadow: none
@@ -110,10 +110,12 @@ config:
 
 # Records, feel free to edit them
 records:
-  - delay: 1357
+  - delay: 100
+    content: " "
+  - delay: 100
     content: h
   - delay: 220
-    content: "\bho"
+    content: o
   - delay: 140
     content: w
   - delay: 291
