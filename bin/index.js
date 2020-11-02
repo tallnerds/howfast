@@ -6,6 +6,7 @@ const parser = require("url");
 const _ = require("lodash");
 const chalk = require("chalk");
 const { colorify } = require("./../lib/console");
+const renderReport = require("./../lib/renderReport");
 const { getMetrics, parseMetrics } = require("./../lib/pagespeed");
 
 const options = yargs
@@ -30,47 +31,31 @@ const options = yargs
   }).argv;
 
 (async () => {
-  let results = {};
+  let results = [];
   // Run through and get results
   for (let x = 0; x < options.times; x++) {
     console.log(`Run ${x + 1} for ${options.site}`);
-    results[x] = await getMetrics(options.site);
+    results.push(await getMetrics(options.site));
     // results[x] = JSON.parse(fs.readFileSync("report.json"));
   }
 
   const metrics = parseMetrics(results, options.times);
+  renderReport(metrics, options.times);
 
   // Average metrics over runs
   console.log(
     chalk.underline(`
 Average Performance Across ${options.site}`)
   );
-  console.log(`
-Performance Score: ${colorify(
-    metrics.performanceScore.score,
-    metrics.performanceScore.score
-  )}
-First Contentful Paint: ${colorify(
-    `${metrics.firstContentfulPaint.numericValue}ms`,
-    metrics.firstContentfulPaint.score
-  )}
-Largest Contentful Paint: ${colorify(
-    `${metrics.largestContentfulPaint.numericValue}ms`,
-    metrics.largestContentfulPaint.score
-  )}
-Speed Index: ${colorify(
-    `${metrics.speedIndex.numericValue}ms`,
-    metrics.speedIndex.score
-  )}
-Cumulative Layout Shift: ${colorify(
-    `${metrics.cumulativeLayoutShift.numericValue}`,
-    metrics.cumulativeLayoutShift.score
-  )}
-Server Response Time: ${colorify(
-    `${metrics.serverResponseTime.numericValue}ms`,
-    metrics.serverResponseTime.score
-  )}
-`);
+
+  _.forEach(metrics, ({ label, metricUnit, average: { score, numericValue } }) => {
+    console.log(
+      `${label}: ${colorify(
+        `${numericValue ? numericValue : score}${metricUnit ? metricUnit : ""}`,
+        score
+      )}`
+    );
+  });
 
   // Output
 
