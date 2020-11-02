@@ -1,13 +1,13 @@
 {
   "name": "@tallnerds/howfast",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "CLI to generate multi-run lighthouse reports",
   "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "howfast": "./bin/index.js"
+    "howfast": "bin/index.js"
   },
   "keywords": [
     "pagespeed",
@@ -20,9 +20,9 @@
     "chalk": "^4.1.0",
     "chrome-launcher": "^0.13.4",
     "lighthouse": "^6.4.1",
+    "lodash": "^4.17.20",
     "lodash.template": "^4.5.0",
     "open": "^7.3.0",
-    "lodash": "^4.17.20",
     "prettier": "^2.1.2",
     "yargs": "^16.1.0"
   },
