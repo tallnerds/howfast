@@ -2,7 +2,6 @@
 
 const fs = require("fs");
 const yargs = require("yargs");
-const parser = require("url");
 const _ = require("lodash");
 const chalk = require("chalk");
 const { colorify } = require("./../lib/console");
@@ -40,29 +39,25 @@ const options = yargs
   }
 
   const metrics = parseMetrics(results, options.times);
-  renderReport(metrics, options.times);
+  renderReport(metrics, options);
 
   // Average metrics over runs
   console.log(
     chalk.underline(`
-Average Performance Across ${options.site}`)
+Average performance across ${options.site}`)
   );
 
-  _.forEach(metrics, ({ label, metricUnit, average: { score, numericValue } }) => {
-    console.log(
-      `${label}: ${colorify(
-        `${numericValue ? numericValue : score}${metricUnit ? metricUnit : ""}`,
-        score
-      )}`
-    );
-  });
-
-  // Output
-
-  // fs.writeFileSync(
-  //   `${options.output}/${
-  //     parser.parse(options.site).hostname
-  //   }-report-${new Date().toISOString()}.json`,
-  //   results[0].report
-  // );
+  _.forEach(
+    metrics,
+    ({ label, metricUnit, average: { score, numericValue } }) => {
+      console.log(
+        `${label}: ${colorify(
+          `${numericValue ? numericValue : score}${
+            metricUnit ? metricUnit : ""
+          }`,
+          score
+        )}`
+      );
+    }
+  );
 })();
