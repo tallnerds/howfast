@@ -18,7 +18,7 @@ references:
 
 commands:
   auth_npm:
-    description: 'Setup NPM auth'
+    description: "Setup NPM auth"
     steps:
       - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
 
@@ -26,6 +26,9 @@ jobs:
   test:
     <<: *container_config
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "f7:b7:c6:d5:e7:74:c1:6f:cc:11:84:85:b3:02:16:5c"
       - checkout
       - *restore_cache
       - run: npm install
