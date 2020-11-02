@@ -16,12 +16,6 @@ references:
     restore_cache:
       key: v1-dependencies-{{ checksum "package.json" }}
 
-commands:
-  auth_npm:
-    description: "Setup NPM auth"
-    steps:
-      - run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
-
 jobs:
   test:
     <<: *container_config
@@ -35,15 +29,6 @@ jobs:
       - *save_cache
       - run: npm run test
 
-  publish:
-    <<: *container_config
-    steps:
-      - checkout
-      - auth_npm
-      - *restore_cache
-      - run: npm install
-      - run: npm publish
-
   release:
     <<: *container_config
     steps:
@@ -56,13 +41,6 @@ workflows:
   version: 2
   build-and-publish:
     jobs:
-      - publish:
-          filters:
-            tags:
-              only: /.*/
-            branches:
-              ignore: /.*/
-
       - release:
           filters:
             branches:
