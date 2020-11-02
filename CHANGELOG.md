@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/tallnerds/howfast/compare/1.2.0...1.3.0) (2020-11-02)
+
+
+### Bug Fixes
+
+* access policy for npm ([9c9640f](https://github.com/tallnerds/howfast/commit/9c9640f34530f8e4ca027fd469f96ceb9b91cbb3))
+
+
+### Features
+
+* add github badge ([21b0ee1](https://github.com/tallnerds/howfast/commit/21b0ee103d0ba4c1bd51e58f4009143e7fd6fa29))
+
 # 1.0.0 (2020-11-02)
 
 
