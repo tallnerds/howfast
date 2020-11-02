@@ -1,5 +1,7 @@
 # howfast
 
+[![CircleCI](https://circleci.com/gh/tallnerds/howfast.svg?style=svg)](https://circleci.com/gh/tallnerds/howfast)
+
 A simple CLI for generating more accurate data from [Lighthouse](https://github.com/GoogleChrome/lighthouse/) reports.
 
 ![](./docs/assets/console_usage.gif)
