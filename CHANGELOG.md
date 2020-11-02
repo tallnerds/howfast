@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/tallnerds/howfast/compare/1.3.0...1.3.1) (2020-11-02)
+
+
+### Bug Fixes
+
+* npmjs is my worst enemy ([36ef048](https://github.com/tallnerds/howfast/commit/36ef048fc8e400c5160565325b9dfa6541a533da))
+
 # [1.3.0](https://github.com/tallnerds/howfast/compare/1.2.0...1.3.0) (2020-11-02)
 
 
