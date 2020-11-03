@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/tallnerds/howfast/compare/1.3.3...1.4.0) (2020-11-03)
+
+
+### Features
+
+* add total blocking time to report ([eed044e](https://github.com/tallnerds/howfast/commit/eed044e72d26670b3a1569b1bba781da26e269e7))
+
 ## [1.3.3](https://github.com/tallnerds/howfast/compare/1.3.2...1.3.3) (2020-11-03)
 
 
