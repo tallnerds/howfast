@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/tallnerds/howfast/compare/1.3.2...1.3.3) (2020-11-03)
+
+
+### Bug Fixes
+
+* round actual numeric values in rendered report ([1eef44f](https://github.com/tallnerds/howfast/commit/1eef44f8c2347963dc67ad6c97297a2eaf9e9002))
+
 ## [1.3.2](https://github.com/tallnerds/howfast/compare/1.3.1...1.3.2) (2020-11-03)
 
 
