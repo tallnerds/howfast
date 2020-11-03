@@ -197,6 +197,6 @@ records:
   - delay: 750
     content: "Run 5 for https://bankrate.com\r\n"
   - delay: 750
-    content: "\e[4m\e[24m\r\n\e[4mAverage performance\e[24m\r\nPerformance Score: \e[33m36\e[39m\r\nFirst Contentful Paint: \e[32m3062.76ms\e[39m\r\nLargest Contentful Paint: \e[31m7535.74ms\e[39m\r\nSpeed Index: \e[33m6005.77ms\e[39m\r\nCumulative Layout Shift: \e[31m1.46\e[39m\r\nServer Response Time: \e[32m50.20ms\e[39m\r\n"
+    content: "\e[4m\e[24m\r\n\e[4mAverage performance\e[24m\r\nPerformance Score: \e[33m36\e[39m\r\nFirst Contentful Paint: \e[32m3062.76ms\e[39m\r\nLargest Contentful Paint: \e[31m7535.74ms\e[39m\r\nSpeed Index: \e[33m6005.77ms\e[39m\r\nCumulative Layout Shift: \e[31m1.46\e[39m\r\nServer Response Time: \e[32m50.20ms\e[39m\r\nTotal Blocking Time: \e[33m446.50ms\e[39m\r\n"
   - delay: 3000
     content: "\r\n> "
