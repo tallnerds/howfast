@@ -36,6 +36,10 @@ howfast -s https://google.com -t 5 -f ~/Downloads
 
 Lastly, if you are creating a PR and want to quickly generate some markup, you can change the report type to html using the `--html` flag. This will give you a generated html file (rather than json) with the results displayed in different ways (json, markdown, etc).
 
+```
+howfast -s https://google.com -t 5 -f ~/Downloads --html
+```
+
 ## Reports
 
 There are 2 types of reports that can be generated from this tool: `json` and `html`.
