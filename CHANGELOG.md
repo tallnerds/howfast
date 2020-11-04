@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/tallnerds/howfast/compare/1.5.1...1.5.2) (2020-11-04)
+
+
+### Bug Fixes
+
+* up the max network wait time to 25seconds ([9c64d4f](https://github.com/tallnerds/howfast/commit/9c64d4f81e270023f2d4af2338c81788c05f0a10))
+
 ## [1.5.1](https://github.com/tallnerds/howfast/compare/1.5.0...1.5.1) (2020-11-04)
 
 
