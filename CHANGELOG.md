@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/tallnerds/howfast/compare/1.4.0...1.5.0) (2020-11-04)
+
+
+### Features
+
+* add verbose flag to surface info logs from lighthouse sdk ([3bcdb54](https://github.com/tallnerds/howfast/commit/3bcdb5482cf0f46af6d65fbc3ed9291ac2bf8f68))
+
 # [1.4.0](https://github.com/tallnerds/howfast/compare/1.3.3...1.4.0) (2020-11-03)
 
 
