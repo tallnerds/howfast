@@ -18,6 +18,12 @@ const options = yargs
     type: "number",
     default: 3,
   })
+  .option("v", {
+    alias: "verbose",
+    describe: "Increase logging output",
+    type: "boolean",
+    default: false,
+  })
   .option("json", {
     type: "boolean",
     description: "(Default) Output raw json metric data to file",
@@ -38,7 +44,7 @@ const options = yargs
   // Run through and get results
   for (let x = 0; x < options.times; x++) {
     console.log(`Run ${x + 1} for ${options.site}`);
-    results.push(await getMetrics(options.site));
+    results.push(await getMetrics(options.site, options));
   }
 
   const metrics = parseMetrics(results, options.times);
