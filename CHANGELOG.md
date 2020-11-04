@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/tallnerds/howfast/compare/1.5.0...1.5.1) (2020-11-04)
+
+
+### Bug Fixes
+
+* up the max load wait time to 25seconds ([2c312c8](https://github.com/tallnerds/howfast/commit/2c312c80b3fe99f91578a98285ae89840932962a))
+
 # [1.5.0](https://github.com/tallnerds/howfast/compare/1.4.0...1.5.0) (2020-11-04)
 
 
