@@ -18,6 +18,12 @@ const options = yargs
     type: "number",
     default: 3,
   })
+  .option("a", {
+    alias: "auth",
+    describe: "The value of the Authorization header to pass to your site (if it requires one)",
+    type: "string",
+    default: "",
+  })
   .option("v", {
     alias: "verbose",
     describe: "Increase logging output",

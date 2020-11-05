@@ -28,7 +28,13 @@ Here is a typical example of hitting a site 5 times
 howfast -s https://google.com -t 5
 ```
 
-By default, this will also generate a json file with all of the metrics you would need to do more detailed analysis. Upon completing the runs, it will open this file automatically for you. By default, this file is stored in `/tmp`, but can be modifying with the `-f` flag
+Here is an example of hitting a site that requires an Authorization header
+
+```
+howfast -s https://google.com -a 'Basic aG93ZmFzdDpyb2Nrcw=='
+```
+
+By default, this will also generate a json file with all of the metrics you would need to do more detailed analysis. Upon completing the runs, it will open this file automatically for you. By default, this file is stored in `/tmp`, but can be modified with the `-f` flag.
 
 ```
 howfast -s https://google.com -t 5 -f ~/Downloads
