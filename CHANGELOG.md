@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/tallnerds/howfast/compare/1.5.2...1.6.0) (2020-11-05)
+
+
+### Features
+
+* add support for auth header ([6172586](https://github.com/tallnerds/howfast/commit/617258647a64a8ee84fd355343748e31ec6c9e2f))
+
 ## [1.5.2](https://github.com/tallnerds/howfast/compare/1.5.1...1.5.2) (2020-11-04)
 
 
