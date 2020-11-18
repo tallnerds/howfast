@@ -1,3 +1,19 @@
+# [2.0.0](https://github.com/tallnerds/howfast/compare/1.6.0...2.0.0) (2020-11-18)
+
+
+### Features
+
+* reformat json output to add options ([2f7bc26](https://github.com/tallnerds/howfast/commit/2f7bc2675c2917056feb5be1f9f0ab69a7ce4241))
+
+
+### BREAKING CHANGES
+
+* this changes the output of the json file to be keyed.
+If you were using the metrics directly, all of the metrics will now be
+under a key labeled "metrics". We also added an additional key called
+"options" that gives you full access to all cli options that were passed
+in.
+
 # [1.6.0](https://github.com/tallnerds/howfast/compare/1.5.2...1.6.0) (2020-11-05)
 
 
