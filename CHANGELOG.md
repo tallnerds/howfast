@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/tallnerds/howfast/compare/2.0.0...2.0.1) (2022-11-07)
+
+
+### Bug Fixes
+
+* update package deps ([6cf2224](https://github.com/tallnerds/howfast/commit/6cf2224701c96d4073ad7c37d325a3ecb5d71c39))
+
 # [2.0.0](https://github.com/tallnerds/howfast/compare/1.6.0...2.0.0) (2020-11-18)
 
 

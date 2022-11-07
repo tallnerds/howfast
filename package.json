@@ -1,6 +1,6 @@
 {
   "name": "@tallnerds/howfast",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "CLI to generate multi-run lighthouse reports",
   "main": "bin/index.js",
   "scripts": {
